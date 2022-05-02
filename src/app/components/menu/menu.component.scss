@@ -1,0 +1,42 @@
+@import '../../../styles.scss';
+
+mat-toolbar{
+  max-width: $contentWidth;
+  background-color: transparent;
+  margin: auto;
+  padding: 0;
+
+  @include text;
+
+  img{
+    cursor: pointer;
+    transform: scale(0.7);
+  }
+
+  .spacer{ flex: 1 1 auto; }
+  .menu{
+    display: flex;
+    .menuItem{
+      font-size: 20px;
+      margin-left: 2rem;
+      font-weight: 600;
+      color: $standardColor;
+      cursor: pointer;
+    }
+    .menuItem:hover{ color: $themeColor; }
+  }
+}
+.mat-menu-item{ @include text; }
+.mat-menu-item .mat-icon-no-color{ color: $themeColor; }
+
+@media(max-width: 1620px){
+  mat-toolbar{
+    margin-top: 2rem;
+    .menu{ display: none; }
+  }
+}
+@media(min-width: 1620px){
+  mat-toolbar{
+    .hamburgerMenu{ display: none; }
+  }
+}

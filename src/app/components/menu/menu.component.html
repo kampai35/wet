@@ -1,1 +1,55 @@
-<p>menu works!</p>
+<mat-toolbar>
+    <img src="https://weterynariamazur.pl/wp-content/uploads/2020/03/logo.png" routerLink="">
+
+    <div class="spacer"></div>
+
+    <div class="menu">
+      <div class="menuItem" routerLink="/o-nas">O NAS</div>
+      <div class="menuItem" routerLink="/rehabilitacja">REHABILITACJA</div>
+      <div class="menuItem" routerLink="/zakres-uslug">ZAKRES USŁUG</div>
+      <div class="menuItem" routerLink="/galeria">GALERIA</div>
+      <div class="menuItem" routerLink="/porady">PORADY</div>
+      <div class="menuItem" routerLink="/sklep">SKLEP</div>
+      <div class="menuItem" routerLink="/kontakt">KONTAKT</div>
+    </div>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu" class="hamburgerMenu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item routerLink="/o-nas">
+        <mat-icon>people</mat-icon>
+        <span>O NAS</span>
+      </button>
+
+      <button mat-menu-item routerLink="/rehabilitacja">
+        <mat-icon>healing</mat-icon>
+        <span>REHABILITACJA</span>
+      </button>
+
+      <button mat-menu-item routerLink="/zakres-uslug">
+        <mat-icon>medical_information</mat-icon>
+        <span>ZAKRES USŁUG</span>
+      </button>
+
+      <button mat-menu-item routerLink="/galeria">
+        <mat-icon>collections</mat-icon>
+        <span>GALERIA</span>
+      </button>
+
+      <button mat-menu-item routerLink="/question_answer">
+        <mat-icon>question_answer</mat-icon>
+        <span>PORADY</span>
+      </button>
+
+      <button mat-menu-item routerLink="/sklep">
+        <mat-icon>shopping_basket</mat-icon>
+        <span>SKLEP</span>
+      </button>
+
+      <button mat-menu-item routerLink="/kontakt">
+        <mat-icon>info</mat-icon>
+        <span>KONTAKT</span>
+      </button>
+    </mat-menu>
+</mat-toolbar>
