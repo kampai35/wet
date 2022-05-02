@@ -9,8 +9,10 @@ import { ComponentsModule } from './../components/components.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
 import { AboutUsComponent } from './about-us/about-us.component';
+
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
   imports: [
     BrowserModule,
     RouterModule,
-    ComponentsModule
+    ComponentsModule,
+    MatGridListModule,
+    MatCarouselModule
   ]
 })
 export class PagesModule { }

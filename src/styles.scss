@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+$themeColor: #85e1a0;
+$standardColor: #777777;
+$headerSecColor: #626262;
+$contentWidth: 70%;
+$linkColor: #0693e3;
+
+@mixin text {
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 400;
+  font-family: Lato, Lato;
+}
+@mixin header {
+  font-size: 29px;
+  font-family: Lato, Lato;
+  color: $themeColor;
+  font-weight: 600;
+  line-height: 1.2;
+}
+@mixin displaySetter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin link {
+  color: $themeColor;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+@mixin linkHover {
+  @include link;
+  color: $linkColor;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

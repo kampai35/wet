@@ -1,0 +1,20 @@
+@import '../../../styles.scss';
+*{
+  background-color: $themeColor;
+  text-align: center;
+}
+div{
+  @include text;
+  padding: 20px;
+
+  .contact{
+    font-weight: 900;
+    cursor: pointer;
+  }
+  a{
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+  }
+}

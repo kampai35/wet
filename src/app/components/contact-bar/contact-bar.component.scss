@@ -1,0 +1,31 @@
+@import '../../../styles.scss';
+.contactBar{
+  color: $themeColor;
+  width: $contentWidth;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  display: flex;
+
+  @include text;
+  .spacer{ flex: auto; }
+
+  .contactItem{
+    cursor: pointer;
+    a{
+      @include link;
+      text-decoration: none;
+    }
+    a:hover{ @include linkHover; }
+
+    .fb{ font-weight: 900;}
+  }
+
+  mat-icon{
+    vertical-align: middle;
+    transform: scale(0.9);
+  }
+}
+@media(max-width: 1200px){
+  .contactBar{ display: none; }
+}
