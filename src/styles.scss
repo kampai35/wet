@@ -4,11 +4,19 @@ $headerSecColor: #626262;
 $contentWidth: 70%;
 $linkColor: #0693e3;
 
+
 @mixin text {
   font-size: 18px;
   line-height: 1.75;
   font-weight: 400;
   font-family: Lato, Lato;
+  color: $standardColor;
+}
+@mixin bodySetter{
+  width: $contentWidth;
+  margin: auto;
+  margin-top: 3rem;
+  @include text;
 }
 @mixin header {
   font-size: 29px;

@@ -2,11 +2,9 @@
 
 h2{ @include header; }
 .body{
-  width: $contentWidth;
-  margin: auto;
-  margin-top: 3rem;
-  @include text;
+  @include bodySetter;
 
+  .covidMobile{ display: none; }
   .title{ margin-bottom: 1.5rem;}
   .link{ @include link; }
   .link:hover{ @include linkHover; }
@@ -18,7 +16,7 @@ h2{ @include header; }
       width: 50%;
       @include displaySetter;
       color: $standardColor;
-      .contact:hover{ color:#0693e3; }
+      .contact:hover{ color: $linkColor; }
     }
     .imageContainer{
       width: 50%;
@@ -52,11 +50,10 @@ h2{ @include header; }
 //simple section
   .simpleSection{
     text-align: center;
-    color: $standardColor;
 
     h2 span{ color: $headerSecColor; }
-
     .servicesDescription{margin-bottom: 8rem; }
+    .mobileList{ display: none; }
   }
 //slider section
   .sliderSection{
@@ -64,7 +61,6 @@ h2{ @include header; }
     margin-bottom: 4rem;
 
     .imageContainer{ width: 50%; }
-
     .carousel{
       width: 80%;
       @include displaySetter;
@@ -103,7 +99,6 @@ h2{ @include header; }
     .info{
       display: flex;
       justify-content: center;
-      color: $standardColor;
       .infoSpacer{ margin-bottom: 2rem; }
       .infoSpacerBig{ margin-bottom: 6rem; }
 
@@ -143,5 +138,103 @@ h2{ @include header; }
       p span { color: $themeColor; }
     }
   }
+}
+//
+@media(max-width: 1200px){
+  .body{
+    .covidMobile{
+      display: block;
+      .covid{
+        width: 600px;
+        margin: auto;
+      }
+    }
+    .section{
+      margin: auto;
+      display: block;
+      .textContainer {
+        margin: auto;
+        width: 100%;
+      }
+      .imageContainer{
+        width: 100%;
+        margin: auto;
+        .kotPiesPng{
+          position: static;
+        }
+        .kotPng{
+          margin: auto;
+          width: 80%;
+          position: static;
+        }
+      }
+    }
+    .spacer { display: none; }
+    .covidDesktop{ display: none; }
 
+    .simpleSection{ .servicesDescription{ margin-bottom: 50px;} }
+
+    .sliderSection{
+      display: block;
+      .imageContainer{ margin: auto; }
+      .carousel{ width: 100%; }
+    }
+
+    .hotSection{
+      .ragdoll{ transform: scale(1); }
+      .ragdoll img{ width: 80%; }
+    }
+  }
+
+}
+@media(max-width: 480px){
+  .body{
+    width: 100%;
+    .covidMobile{
+      .covid{
+        width: 350px;
+        margin: auto;
+      }
+    }
+    .section{
+      .textContainer {
+        margin: auto;
+        width: 100%;
+        padding: 0 10px 0 10px;
+      }
+      .imageContainer{
+        width: 100%;
+        margin: auto;
+        .kotPiesPng{
+          position: static;
+          width: 350px;
+        }
+        .kotPng{
+          margin: auto;
+          width: 80%;
+          position: static;
+        }
+      }
+    }
+    .spacer { display: none; }
+    .covidDesktop{ display: none; }
+
+    .simpleSection{
+      .servicesDescription{ margin-bottom: 50px;}
+      .desktopList{ display: none; }
+      .mobileList{ display: block;}
+    }
+
+    .sliderSection{
+      display: block;
+      .imageContainer{
+        width: 90%;
+        .piesPng{
+          margin: auto;
+          width: 350px;
+        }
+      }
+    }
+    .info{ width: 90%; }
+  }
 }

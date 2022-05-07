@@ -1,0 +1,126 @@
+@import '../../../styles.scss';
+
+h2{ @include header; }
+.body{
+  @include bodySetter;
+  width: 65%;
+
+  .textRightSection{
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    display: flex;
+    .who{
+      padding-left: 5rem;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      h2{
+        font-weight: 800;
+        text-align: right;
+        margin-bottom: 1.5rem;
+        span{ color: $headerSecColor; }
+      }
+    }
+    .whoImg{
+      width: 60%;
+      display: flex;
+      align-items: center;
+      img{ width: 100%; }
+    }
+  }
+
+  .textLeftSection{
+    display: flex;
+    margin-bottom: 4rem;
+    .description{
+      display: flex;
+      align-items: center;
+      width: 65%;
+      padding-right: 3rem;
+      div{ display: block; }
+    }
+    .descriptionImg{
+      display: flex;
+      justify-content: center;
+      width: 35%;
+    }
+  }
+
+  .team{
+    margin-bottom: 3rem;
+    h2{
+      text-align: center;
+      margin-bottom: 3rem;
+      span{ color: $headerSecColor; }
+    }
+    .item{
+      text-align: center;
+      font-size: 24px;
+      font-weight: 800;
+      color: $headerSecColor;
+      .job{ color: $themeColor; }
+    }
+  }
+
+}
+//media
+@media(max-width: 1200px){
+  .body{
+    width: 90%;
+
+    .textRightSection{ margin-bottom: 6rem; }
+    .textLeftSection{
+      .description{ padding-right: 0.5rem; }
+    }
+
+    .team{
+      margin-bottom: 3rem;
+      h2{
+        text-align: center;
+        margin-bottom: 3rem;
+        span{ color: $headerSecColor; }
+      }
+      .item{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 800;
+        color: $headerSecColor;
+        .job{ color: $themeColor; }
+      }
+    }
+  }
+}
+
+@media(max-width: 480px){
+  .body{
+    width: 90%;
+
+    .textRightSection{
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      display: block;
+      .who{
+        padding-left: 0;
+        width: 100%;
+        h2{ text-align: center; }
+      }
+      .whoImg{
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .textLeftSection{
+      display: block;
+      margin-bottom: 4rem;
+      .description{
+        width: 100%;
+        padding-right: 0;
+      }
+      .descriptionImg{
+        margin-top: 2rem;
+        width: 100%;
+      }
+    }
+  }
+}
