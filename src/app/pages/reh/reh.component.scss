@@ -1,0 +1,112 @@
+@import '../../../styles.scss';
+
+h2{ @include header; }
+.body{
+  @include bodySetter;
+  width: 65%;
+
+  .textLeftSection{
+    display: flex;
+    .description{
+      display: flex;
+      align-items: center;
+      width: 60%;
+      padding-right: 6rem;
+      div{ display: block; }
+    }
+    .descriptionImg{
+      justify-content: center;
+      width: 40%;
+      img{ width: 130%;}
+    }
+  }
+
+  .textRightSection{
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    display: flex;
+    .what{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      h2{
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: $headerSecColor;
+      }
+    }
+    .whatImg{
+      width: 50%;
+      img{ width: 100%; }
+    }
+  }
+
+  .list{
+    margin-bottom: 2rem;
+    h2{ margin-bottom: 2rem; }
+    p { margin-bottom: 1rem ;}
+    ul{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      list-style-type: none;
+
+      mat-icon{
+        margin-right: 0.5rem;
+        vertical-align: middle;
+        font-size: 20px;
+        color: rgba(133,225,160,0.75);
+      }
+    }
+  }
+
+}
+//media
+@media(max-width: 1200px){
+  .body{
+    width: 90%;
+
+    .textRightSection{ margin-bottom: 6rem; }
+    .textLeftSection{
+      .description{
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}
+
+@media(max-width: 480px){
+  .body{
+    width: 90%;
+
+    .textLeftSection{
+      margin-top: 5rem;
+      flex-direction: column-reverse;
+      .description{
+        h2 {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+        width: 100%;
+      }
+      .descriptionImg{
+        width: 100%;
+        img{ width: 100%;}
+      }
+    }
+    .textRightSection{
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      display: block;
+      .what{
+        padding-left: 0;
+        width: 100%;
+        h2{ text-align: center; }
+      }
+      .whatImg{
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

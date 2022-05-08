@@ -13,6 +13,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     RouterModule,
     ComponentsModule,
     MatGridListModule,
-    MatCarouselModule
+    MatCarouselModule,
+    MatIconModule
   ]
 })
 export class PagesModule { }
